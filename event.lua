@@ -9,15 +9,15 @@ Citizen.CreateThread(function()
                     local eventDataSize = 9
 
                     local eventDataStruct = DataView.ArrayBuffer(8*9) -- buffer must be 8*eventDataSize or bigger
-                    eventDataStruct:SetInt32(0 ,0)		 	-- 8*0 offset for 0 element of eventData
-                    eventDataStruct:SetInt32(8 ,0)    	  	-- 8*1 offset for 1 element of eventData
-                    eventDataStruct:SetInt32(16 ,0)			-- 8*2 offset for 2 element of eventData
-                    eventDataStruct:SetInt32(24 ,0)			-- 8*3 offset for 3 element of eventData
-                    eventDataStruct:SetInt32(32,0)    		-- 8*4 offset for 4 element of eventData
-                    eventDataStruct:SetInt32(40,0)    		-- 8*5 offset for 5 element of eventData
-                    eventDataStruct:SetInt32(48,0)    		-- 8*6 offset for 6 element of eventData
-                    eventDataStruct:SetInt32(56,0)    		-- 8*7 offset for 7 element of eventData
-                    eventDataStruct:SetInt32(64,0)    		-- 8*8 offset for 8 element of eventData
+                    eventDataStruct:SetInt32(0 ,0) -- 8*0 offset for 0 element of eventData
+                    eventDataStruct:SetInt32(8 ,0) -- 8*1 offset for 1 element of eventData
+                    eventDataStruct:SetInt32(16 ,0) -- 8*2 offset for 2 element of eventData
+                    eventDataStruct:SetInt32(24 ,0) -- 8*3 offset for 3 element of eventData
+                    eventDataStruct:SetInt32(32,0) -- 8*4 offset for 4 element of eventData
+                    eventDataStruct:SetInt32(40,0) -- 8*5 offset for 5 element of eventData
+                    eventDataStruct:SetInt32(48,0) -- 8*6 offset for 6 element of eventData
+                    eventDataStruct:SetInt32(56,0) -- 8*7 offset for 7 element of eventData
+                    eventDataStruct:SetInt32(64,0) -- 8*8 offset for 8 element of eventData
 
                     local is_data_exists = Citizen.InvokeNative(0x57EC5FA4D4D6AFCA, 0, index, eventDataStruct:Buffer(), eventDataSize) -- GET_EVENT_DATA
 
