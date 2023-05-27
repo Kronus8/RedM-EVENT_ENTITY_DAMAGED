@@ -22,15 +22,15 @@ Citizen.CreateThread(function()
                     local is_data_exists = Citizen.InvokeNative(0x57EC5FA4D4D6AFCA, 0, index, eventDataStruct:Buffer(), eventDataSize) -- GET_EVENT_DATA
 
                     if is_data_exists then
-                    print("0: pedId: "..eventDataStruct:GetInt32(0))
-                    print("1: object: "..eventDataStruct:GetInt32(8))
-                    print("2: weaponhash: "..eventDataStruct:GetInt32(16))
-                    print("3: ammohash: "..eventDataStruct:GetInt32(24))
-                    print("4: damage: "..eventDataStruct:GetFloat32(32))
-                    print("5: unknown: "..eventDataStruct:GetInt32(40))
-                    print("6: coord x: "..eventDataStruct:GetFloat32(48))
-                    print("7: coord y: "..eventDataStruct:GetFloat32(56))
-                    print("8: coord z: "..eventDataStruct:GetFloat32(64))
+                        print("0: pedId: "..eventDataStruct:GetInt32(0))
+                        print("1: object: "..eventDataStruct:GetInt32(8))
+                        print("2: weaponhash: "..eventDataStruct:GetInt32(16))
+                        print("3: ammohash: "..eventDataStruct:GetInt32(24))
+                        print("4: damage: "..eventDataStruct:GetFloat32(32))
+                        print("5: unknown: "..eventDataStruct:GetInt32(40))
+                        print("6: coord x: "..eventDataStruct:GetFloat32(48))
+                        print("7: coord y: "..eventDataStruct:GetFloat32(56))
+                        print("8: coord z: "..eventDataStruct:GetFloat32(64))
                     end
                 end
             end
